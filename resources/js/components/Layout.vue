@@ -68,9 +68,9 @@
                         </ul>
                     </li>
                     <li>
-<!--                        <router-link :to="{ name: 'CaculatorFront'}">-->
-                        <a href="#">   <i class="fa fa-book"></i> <span>Menu 2</span></a>
-<!--                        </router-link>-->
+                        <router-link :to="{ name: 'LearnVue'}">
+                        <i class="fa fa-book"></i> <span>Learn Vue</span>
+                        </router-link>
                     </li>
                     <li class="treeview">
                         <a href="#">
@@ -90,9 +90,9 @@
                         </ul>
                     </li>
                     <li>
-<!--                        <router-link :to="{ name: 'Dashboard'}">-->
-                        <a href=""><i class="fa fa-dashboard"></i> <span>Menu 4</span></a>
-<!--                        </router-link>-->
+                        <router-link :to="{ name: 'Page_Vue_2'}">
+                        <a href=""><i class="fa fa-dashboard"></i> <span>Page Vue 2</span></a>
+                        </router-link>
                     </li>
                 </ul>
             </section>
@@ -101,14 +101,14 @@
 
         <div class="app-content content container-fluid content-wrapper">
             <div class="content-wrapper">
-<!--                <router-view :key="$route.fullPath"></router-view>-->
+                <router-view></router-view>
             </div>
         </div>
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
                 <b>Version</b> 1.0
             </div>
-            <strong>KAOPIZ-AI</strong>
+            <strong>HD</strong>
         </footer>
 
     </div>

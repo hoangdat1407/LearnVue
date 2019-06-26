@@ -7,7 +7,6 @@
 // import ExampleComponent from "./components/ExampleComponent.vue";
 
 require('./bootstrap');
-// window.Vue = require('vue');
 import Vue from 'vue'
 
 /**
@@ -18,30 +17,25 @@ import Vue from 'vue'
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-// const files = require.context('./', true, /\.vue$/i);
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 import Layout from './components/Layout.vue';
-Vue.component('learn-vue', require('./components/LearnVue.vue'));
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+
+import {routes} from "./routes";
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-// const routes = [
-//     {path:'example', component: ExampleComponent},
-//     {path:'learnVue', component: LearnVue}
-// ];
-//
-// const router = new VueRouter({
-//     routes
-// });
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
 
 const app = new Vue({
-    // router: router,
-    components : {Layout},
     el: '#app',
+    components : {Layout},
+    router: router
 });

@@ -4,11 +4,10 @@
             <div class="col-md-8">
                 <div class="card">
                     <div ref="abc" class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        <p>Product three cost: {{ productThreeCost | formatCost }}</p>
-                        <router-link to="/learnVue">Go to learnVue</router-link>
-                    </div>
+                    <input type="text" v-model="msg">
+                    <br>
+                    <h4>Show text:</h4>
+                    <span>{{msg}}</span>
                 </div>
             </div>
         </div>
@@ -17,7 +16,18 @@
 
 <script>
     export default {
-        name: "LearnVue"
+        name: "LearnVue",
+        // props: [
+        //   msg
+        // ],
+        data() {
+            return {
+                msg: '',
+            }
+        },
+        method: {
+
+        }
     }
 </script>
 
