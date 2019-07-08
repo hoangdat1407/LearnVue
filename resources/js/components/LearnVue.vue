@@ -8,6 +8,8 @@
                     <br>
                     <h4>Show text:</h4>
                     <span>{{msg}}</span>
+                    <button class="btn btn-primary">Show modal</button>
+                    <Datepicker format="HH:mm"></Datepicker>
                 </div>
             </div>
         </div>
@@ -15,8 +17,12 @@
 </template>
 
 <script>
+    import Datepicker from 'vuejs-datepicker'
     export default {
         name: "LearnVue",
+        components: {
+            Datepicker
+        },
         // props: [
         //   msg
         // ],
